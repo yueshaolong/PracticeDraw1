@@ -2,7 +2,11 @@ package com.hencoder.hencoderpracticedraw1.practice;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.RectF;
+import android.os.Build.VERSION_CODES;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -23,7 +27,9 @@ public class Practice5DrawOvalView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
+        Paint paint = new Paint();
 //        练习内容：使用 canvas.drawOval() 方法画椭圆
+//        canvas.drawOval(300,200,800,400,paint);
+        canvas.drawOval(new RectF(300,200,700,400), paint);
     }
 }
